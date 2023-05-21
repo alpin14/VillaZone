@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">VillaZone</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="textVillaZone">VillaZone Kost</string>
+    <string name="textBandung">Bandung, Indonesia</string>
+    <string name="textBabakan">Babakan Ciamis, Bandung</string>
+    <string name="textKost">Kost</string>
+    <string name="textLuasTanah">105 m2 Luas Tanah</string>
+    <string name="IconLuasTanah">IconLuasTanah</string>
+    <string name="textKamar">30 Kamar Tidur</string>
+
+    <string name="fragmentTagihan">Hello, jangan lupa bayar kost</string>
+    <string name="IconParkiran">IconParkiran</string>
+    <string name="textParkiran">Parkiran Motor</string>
+    <string name="Iconkamar">IconKamar</string>
+    <string name="textBangunan">95 m2 Luas Bangunan</string>
+    <string name="IconBangunan">IconBangunan</string>
+    <string name="IconKamarMandi">IconKamarMandi</string>
+    <string name="textKamarMandi">Kamar Mandi</string>
+
+    <string name="textProfile">Profile</string>
+    <string name="textGroup">Group</string>
+    <string name="textTagihan">Detail Estimasi Pembayaran</string>
+    <string name="text_awal">Pembayaran Awal Masuk Kost</string>
+</resources>
