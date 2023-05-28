@@ -2,7 +2,10 @@ package com.proyektingkat2.villazone.ui
 
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Html
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +25,9 @@ class HomeFragment : Fragment() {
     private val list = ArrayList<ImageData>()
     private lateinit var dots: ArrayList<TextView>
 
+    private lateinit var handler: Handler
+    private lateinit var runnable: Runnable
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,6 +40,19 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        handler = Handler(Looper.getMainLooper())
+        runnable = object : Runnable {
+            var index = 0
+            override fun run() {
+                if (index == list.size)
+                    index = 0
+                Log.e("Runnable,", "$index")
+                binding.viewPager.currentItem = index
+                index++
+                handler.postDelayed(this, 2100)
+            }
+        }
 
         list.add(
             ImageData(
@@ -95,5 +114,15 @@ class HomeFragment : Fragment() {
             dots[i].textSize = 18f
             binding.dotsIndicator.addView(dots[i])
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        handler.post(runnable)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        handler.removeCallbacks(runnable)
     }
 }
