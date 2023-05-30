@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "335912063035",
+    "project_id": "fvillazone",
+    "storage_bucket": "fvillazone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335912063035:android:8c2f34510e0494707f4c1e",
+        "android_client_info": {
+          "package_name": "com.proyektingkat2.villazone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMqc4hy-nzobnWEkH8o8vconDZXwnSmNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

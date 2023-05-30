@@ -1,9 +1,9 @@
 package com.proyektingkat2.villazone
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -14,6 +14,7 @@ import com.proyektingkat2.villazone.ui.ProfileFragment
 import com.proyektingkat2.villazone.ui.TagihanFragment
 
 class MainActivity : AppCompatActivity() {
+
     val fragmentHome : Fragment = HomeFragment()
     val fragmentGroup : Fragment = GroupFragment()
     val fragmentTagihan : Fragment = TagihanFragment()
@@ -26,7 +27,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var menuItem: MenuItem
 
     lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
