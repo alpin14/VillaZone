@@ -23,4 +23,22 @@
     <string name="textGroup">Group</string>
     <string name="textTagihan">Detail Estimasi Pembayaran</string>
     <string name="text_awal">Pembayaran Awal Masuk Kost</string>
+
+    <string name="belum_ada_data">Belum ada data</string>
+    
+    <string name="pembayaran">Pembayaran Awal Masuk Kost</string>
+
+    <string name="dengandp">Dengan DP(Uang Muka):</string>
+    <string name="dp">DP(Uang Muka)</string>
+    <string name="perbulan">Per Bulan</string>
+    <string name="per6bulan">Per 6 Bulan</string>
+    <string name="pertahun">Per Tahun</string>
+    <string name="tvPelunasan">Pelunasan</string>
+
+    <string name="tanpadp">Tanpa DP(Uang Muka):</string>
+    <string name="pembayaranLunas">Pembayaran Lunas</string>
+    <string name="pembayaranSelanjutnya">Pembayaran Selanjutnya</string>
+
+    <string name="hargasewa">Harga Sewa Kost</string>
+    <string name="totalpemselanjutnya">Total Pembayaran Selanjutnya</string>
 </resources>

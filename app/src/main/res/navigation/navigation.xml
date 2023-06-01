@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.proyektingkat2.villazone.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tagihanFragment"
+            app:destination="@id/tagihanFragment"/>
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.proyektingkat2.villazone.ui.GroupFragment"
+        android:label="Group"
+        tools:layout="@layout/fragment_group" />
+    <fragment
+        android:id="@+id/tagihanFragment"
+        android:name="com.proyektingkat2.villazone.ui.tagihan.TagihanFragment"
+        android:label="Tagihan"
+        tools:layout="@layout/fragment_tagihan" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.proyektingkat2.villazone.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
