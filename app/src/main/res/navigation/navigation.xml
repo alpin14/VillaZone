@@ -15,7 +15,7 @@
             app:destination="@id/groupFragment" />
         <action
             android:id="@+id/action_homeFragment_to_tagihanFragment"
-            app:destination="@id/tagihanFragment"/>
+            app:destination="@id/tagihanFragment" />
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
