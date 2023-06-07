@@ -24,7 +24,11 @@
         android:id="@+id/daftarPenghuniFragment"
         android:name="com.proyektingkat2.villazone.ui.penghuni.daftarpenghuni.DaftarPenghuniFragment"
         android:label="fragment_daftar_penghuni"
-        tools:layout="@layout/fragment_daftar_penghuni" />
+        tools:layout="@layout/fragment_daftar_penghuni" >
+        <action
+            android:id="@+id/action_daftarPenghuniFragment_to_tambahPenghuniFragment"
+            app:destination="@id/tambahPenghuniFragment" />
+    </fragment>
     <fragment
         android:id="@+id/tagihanFragment"
         android:name="com.proyektingkat2.villazone.ui.TagihanFragment"
@@ -34,7 +38,11 @@
         android:id="@+id/tambahPenghuniFragment"
         android:name="com.proyektingkat2.villazone.ui.penghuni.tambahpenghuni.TambahPenghuniFragment"
         android:label="fragment_tambah_penghuni"
-        tools:layout="@layout/fragment_tambah_penghuni" />
+        tools:layout="@layout/fragment_tambah_penghuni" >
+        <action
+            android:id="@+id/action_tambahPenghuniFragment_to_daftarPenghuniFragment"
+            app:destination="@id/daftarPenghuniFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.proyektingkat2.villazone.ui.ProfileFragment"

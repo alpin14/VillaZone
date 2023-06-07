@@ -27,12 +27,15 @@
     <string name="daftarpenghuni">Daftar Penghuni</string>
     <string name="tagihan">Tagihan</string>
     <string name="profile">Profile</string>
-    <string name="belum_ada_data">Belum Ada Data</string>
+    <string name="belum_ada_data">Belum Ada Penghuni!!</string>
     <string name="tambah">Tambah</string>
-    <string name="nama_penghuni">Masukkan Nama Penghuni</string>
-    <string name="biaya_kamar">Masukkan Biaya Kamar</string>
+    <string name="nama_penghuni">Nama Penghuni</string>
+    <string name="biaya_kamar">Biaya Kamar</string>
     <string name="string_nomor_kamar">Masukkan Nomor Kamar</string>
     <string name="kontak_penghuni">Masukkan Kontak Penghuni</string>
     <string name="simpan">Simpan</string>
     <string name="reset">Reset</string>
+    <string name="image">image</string>
+    <string name="nomor_kamar">Nomor Kamar</string>
+    <string name="tanggal_masuk">Masukkan Tanggal Masuk</string>
 </resources>

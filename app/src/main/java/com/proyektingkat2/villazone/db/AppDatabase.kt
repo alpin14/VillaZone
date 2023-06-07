@@ -7,28 +7,25 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [PenghuniEntity::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract val dao: PenghuniDao
+    abstract fun  getPenghuniDao(): PenghuniDao
 
     companion object {
         @Volatile
-        private var INSTANCE: AppDatabase? = null
+        private var instance: AppDatabase? = null
+        private val LOCK = Any()
 
-        fun getInstance(context: Context): AppDatabase {
-            synchronized(this) {
-                var instance = INSTANCE
-
-                if (instance == null) {
-                    instance = Room.databaseBuilder(
-                        context.applicationContext,
-                        AppDatabase::class.java,
-                        "villazone.db"
-                    )
-                        .fallbackToDestructiveMigration()
-                        .build()
-                    INSTANCE = instance
-                }
-                return instance
-            }
+        operator fun invoke(context: Context) = instance ?:
+        synchronized(LOCK) {
+            instance ?:
+            createDatabase(context).also { instance = it }
         }
+
+        private fun createDatabase(context: Context) =
+            Room.databaseBuilder(
+                context.applicationContext,
+                AppDatabase::class.java,
+                "penghuni_db"
+            ).build()
     }
+
 }
