@@ -2,23 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/outline_home_24"
-        android:title="Home"/>
+        android:title="@string/home" />
 
     <item
-        android:id="@+id/navigation_group"
+        android:id="@+id/daftarPenghuniFragment"
         android:icon="@drawable/outline_group_24"
-        android:title="Group"/>
+        android:title="@string/daftarpenghuni" />
 
     <item
-        android:id="@+id/navigation_tagihan"
+        android:id="@+id/tagihanFragment"
         android:icon="@drawable/outline_wallet_24"
-        android:title="Bill"/>
+        android:title="@string/tagihan" />
 
     <item
-        android:id="@+id/navigation_profile"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/outline_account_circle_24"
-        android:title="Profile"/>
+        android:title="@string/profile" />
 
 </menu>

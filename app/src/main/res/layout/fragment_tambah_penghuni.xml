@@ -1,0 +1,86 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.penghuni.tambahpenghuni.TambahPenghuniFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/namaPenghuni_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_penghuni">
+
+            <EditText
+                android:id="@+id/namaPenghuni_inp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nomorKamar_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/string_nomor_kamar"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/nomorKamar_inp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/biayaKamar_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/biaya_kamar"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/biayaKamar_inp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nomorPenghuni_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/kontak_penghuni"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/nomorPenghuni_inp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/simpan"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
