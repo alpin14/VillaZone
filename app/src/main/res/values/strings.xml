@@ -38,4 +38,6 @@
     <string name="image">image</string>
     <string name="nomor_kamar">Nomor Kamar</string>
     <string name="tanggal_masuk">Masukkan Tanggal Masuk</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>

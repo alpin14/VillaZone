@@ -110,4 +110,5 @@ class DaftarPenghuniFragment : Fragment(R.layout.fragment_daftar_penghuni),
         super.onDestroy()
         _binding = null
     }
+
 }

@@ -44,6 +44,10 @@ class TambahPenghuniFragment : Fragment(R.layout.fragment_tambah_penghuni) {
         binding.btnSimpan.setOnClickListener {
             savePenghuni()
         }
+
+        binding.btnReset.setOnClickListener {
+            resetPenghuni()
+        }
     }
 
     private fun savePenghuni() {
@@ -59,7 +63,7 @@ class TambahPenghuniFragment : Fragment(R.layout.fragment_tambah_penghuni) {
                 namaPenghuni,
                 nomorPenghuni,
                 noKamarPenghuni.toInt(),
-                biayaKamar.toInt(),
+                biayaKamar.toDouble(),
                 tanggalMasuk
             )
 
@@ -68,11 +72,21 @@ class TambahPenghuniFragment : Fragment(R.layout.fragment_tambah_penghuni) {
                 mView, "Penghuni berhasil disimpan",
                 Snackbar.LENGTH_SHORT
             ).show()
-            mView.findNavController().navigate(R.id.action_tambahPenghuniFragment_to_daftarPenghuniFragment)
+            mView.findNavController()
+                .navigate(R.id.action_tambahPenghuniFragment_to_daftarPenghuniFragment)
         } else {
             activity?.toast("Silahkan isi form yang masih kosong")
         }
     }
+
+    private fun resetPenghuni() {
+        binding.namaPenghuniInp.text.clear()
+        binding.nomorKamarInp.text.clear()
+        binding.biayaKamarInp.text.clear()
+        binding.nomorPenghuniInp.text.clear()
+        binding.tanggalMasukInp.text.clear()
+    }
+
 
     override fun onDestroy() {
         super.onDestroy()

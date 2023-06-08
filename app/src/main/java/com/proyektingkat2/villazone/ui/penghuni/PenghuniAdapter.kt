@@ -1,6 +1,5 @@
 package com.proyektingkat2.villazone.ui.penghuni
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -10,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.proyektingkat2.villazone.databinding.PenghuniLayoutAdapterBinding
 import com.proyektingkat2.villazone.db.PenghuniEntity
 import com.proyektingkat2.villazone.ui.penghuni.daftarpenghuni.DaftarPenghuniFragmentDirections
-import java.util.*
 
 class PenghuniAdapter : RecyclerView.Adapter<PenghuniAdapter.PenghuniViewHolder>() {
 
@@ -48,12 +46,14 @@ class PenghuniAdapter : RecyclerView.Adapter<PenghuniAdapter.PenghuniViewHolder>
 
         holder.itemBinding.tvNamaPenghuni.text = currentPenghuni.namaPenghuni
         holder.itemBinding.tvNomorKamar.text = currentPenghuni.nomorKamar.toString()
+        holder.itemBinding.tvBiayaKamar.text = currentPenghuni.biayaKamar.toString()
         holder.itemView.setOnClickListener { view ->
             val direction = DaftarPenghuniFragmentDirections
-                .actionDaftarPenghuniFragmentToTambahPenghuniFragment()
+                .actionDaftarPenghuniFragmentToDetailPenghuniFragment(currentPenghuni)
             view.findNavController().navigate(direction)
         }
     }
+
 
     override fun getItemCount(): Int {
         return differ.currentList.size

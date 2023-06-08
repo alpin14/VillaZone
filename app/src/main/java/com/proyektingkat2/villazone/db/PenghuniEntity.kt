@@ -13,6 +13,6 @@ data class PenghuniEntity(
     val namaPenghuni: String,
     val nomorHp: String,
     val nomorKamar: Int,
-    val biayaKamar: Int,
+    val biayaKamar: Double,
     val tanggalMasuk: String
 ) : Parcelable
