@@ -1,8 +1,10 @@
 package com.proyektingkat2.villazone
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -21,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     val fragmentProfile : Fragment = ProfileFragment()
     val fm : FragmentManager = supportFragmentManager
     var active : Fragment = fragmentHome
+    var backPressedTime: Long = 0
 
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var menu: Menu
@@ -70,5 +73,12 @@ class MainActivity : AppCompatActivity() {
         menuItem.isChecked = true
         fm.beginTransaction().hide(active).show(fragment).commit()
         active = fragment
+    }
+
+    override fun onBackPressed() {
+        val exitIntent = Intent(Intent.ACTION_MAIN)
+        exitIntent.addCategory(Intent.CATEGORY_HOME)
+        exitIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(exitIntent)
     }
 }

@@ -1,4 +1,4 @@
-package com.proyektingkat2.villazone
+package com.proyektingkat2.villazone.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

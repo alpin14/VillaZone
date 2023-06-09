@@ -13,8 +13,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
-import com.proyektingkat2.villazone.ImageSliderAdapter
 import com.proyektingkat2.villazone.R
+import com.proyektingkat2.villazone.adapter.ImageSliderAdapter
 import com.proyektingkat2.villazone.databinding.FragmentHomeBinding
 import com.proyektingkat2.villazone.model.ImageData
 
