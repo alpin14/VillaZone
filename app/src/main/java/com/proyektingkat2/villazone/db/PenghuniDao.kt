@@ -20,4 +20,6 @@ interface PenghuniDao {
 
     @Query("SELECT * FROM penghuni WHERE namaPenghuni LIKE '%' || :query || '%' OR nomorKamar LIKE '%' || :query || '%'")
     fun searchPenghuni(query: String?): LiveData<List<PenghuniEntity>>
+
+
 }

@@ -16,20 +16,17 @@ class PenghuniAdapter : RecyclerView.Adapter<PenghuniAdapter.PenghuniViewHolder>
         RecyclerView.ViewHolder(itemBinding.root)
 
 
-    private val differCallback =
-        object : DiffUtil.ItemCallback<PenghuniEntity>() {
-            override fun areItemsTheSame(oldItem: PenghuniEntity, newItem: PenghuniEntity): Boolean {
-                return oldItem.id == newItem.id &&
-                        oldItem.namaPenghuni == newItem.namaPenghuni &&
-                        oldItem.nomorKamar == newItem.nomorKamar
-                        oldItem.biayaKamar == newItem.biayaKamar
-            }
-
-            override fun areContentsTheSame(oldItem: PenghuniEntity, newItem: PenghuniEntity): Boolean {
-                return oldItem == newItem
-            }
-
+    private val differCallback = object : DiffUtil.ItemCallback<PenghuniEntity>() {
+        override fun areItemsTheSame(oldItem: PenghuniEntity, newItem: PenghuniEntity): Boolean {
+            return oldItem.id == newItem.id &&
+                    oldItem.namaPenghuni == newItem.namaPenghuni &&
+                    oldItem.nomorKamar == newItem.nomorKamar
         }
+
+        override fun areContentsTheSame(oldItem: PenghuniEntity, newItem: PenghuniEntity): Boolean {
+            return oldItem == newItem
+        }
+    }
 
     val differ = AsyncListDiffer(this, differCallback)
 
@@ -44,15 +41,16 @@ class PenghuniAdapter : RecyclerView.Adapter<PenghuniAdapter.PenghuniViewHolder>
     override fun onBindViewHolder(holder: PenghuniViewHolder, position: Int) {
         val currentPenghuni = differ.currentList[position]
 
-        holder.itemBinding.tvNamaPenghuni.text = currentPenghuni.namaPenghuni
-        holder.itemBinding.tvNomorKamar.text = currentPenghuni.nomorKamar.toString()
-        holder.itemBinding.tvBiayaKamar.text = currentPenghuni.biayaKamar.toString()
+        holder.itemBinding.tvNamaPenghuni.text = "Nama: ${currentPenghuni.namaPenghuni}"
+        holder.itemBinding.tvNomorKamar.text = "Nomor Kamar: ${currentPenghuni.nomorKamar}"
+
         holder.itemView.setOnClickListener { view ->
             val direction = DaftarPenghuniFragmentDirections
                 .actionDaftarPenghuniFragmentToDetailPenghuniFragment(currentPenghuni)
             view.findNavController().navigate(direction)
         }
     }
+
 
 
     override fun getItemCount(): Int {

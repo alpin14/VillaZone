@@ -1,102 +1,180 @@
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:padding="16sp"
+tools:context=".ui.penghuni.tambahpenghuni.TambahPenghuniFragment">
+
+<TextView
+    android:id="@+id/p1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/nama_penghuni"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+    android:paddingLeft="7dp"
+    android:id="@+id/namaPenghuni_inp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.penghuni.tambahpenghuni.TambahPenghuniFragment">
+    android:layout_height="45dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/border_radius_edttext"
+    android:inputType="text"
+    android:enabled="true"
+    android:textSize="18sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/p1" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+<TextView
+    android:id="@+id/p2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/nomor_kamar"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/namaPenghuni_inp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/namaPenghuni_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/nama_penghuni">
+<EditText
+    android:id="@+id/nomorKamar_inp"
+    android:paddingLeft="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/border_radius_edttext"
+    android:inputType="number"
+    android:enabled="true"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/p2" />
 
-            <EditText
-                android:id="@+id/namaPenghuni_inp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text" />
+<TextView
+    android:id="@+id/p3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/biaya_kamar"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/nomorKamar_inp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+<EditText
+    android:id="@+id/biayaKamar_inp"
+    android:paddingLeft="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/border_radius_edttext"
+    android:inputType="numberDecimal"
+    android:enabled="true"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/p3" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nomorKamar_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/string_nomor_kamar"
-            android:layout_marginTop="16dp">
+<TextView
+    android:id="@+id/p4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/kontak_penghuni2"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/biayaKamar_inp" />
 
-            <EditText
-                android:id="@+id/nomorKamar_inp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
+<EditText
+    android:id="@+id/nomorPenghuni_inp"
+    android:paddingLeft="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/border_radius_edttext"
+    android:inputType="phone"
+    android:enabled="true"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/p4" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+<TextView
+    android:id="@+id/p5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/tanggal_masuk2"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/nomorPenghuni_inp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/biayaKamar_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/biaya_kamar"
-            android:layout_marginTop="16dp">
+<EditText
+    android:id="@+id/tanggalMasuk_inp"
+    android:paddingLeft="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/border_radius_edttext"
+    android:inputType="date"
+    android:enabled="true"
+    android:textSize="16sp"
+    android:hint="DD/MM/YYYY"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/p5" />
 
-            <EditText
-                android:id="@+id/biayaKamar_inp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
+<Button
+    android:id="@+id/btnSimpan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:backgroundTint="@color/green_save"
+    android:text="@string/simpan"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/tanggalMasuk_inp"
+    app:layout_constraintTop_toBottomOf="@+id/tanggalMasuk_inp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+<Button
+    android:id="@+id/btnReset"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:backgroundTint="@color/red_delete"
+    android:text="@string/reset"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/btnSimpan"
+    app:layout_constraintTop_toBottomOf="@+id/btnSimpan" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nomorPenghuni_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/kontak_penghuni"
-            android:layout_marginTop="16dp">
-
-            <EditText
-                android:id="@+id/nomorPenghuni_inp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tanggalMasuk_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/tanggal_masuk"
-            android:layout_marginTop="16dp">
-
-            <EditText
-                android:id="@+id/tanggalMasuk_inp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="date" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btnSimpan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/simpan"
-            android:layout_marginTop="16dp" />
-
-        <Button
-            android:id="@+id/btnReset"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/reset"
-            android:layout_marginTop="16dp" />
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

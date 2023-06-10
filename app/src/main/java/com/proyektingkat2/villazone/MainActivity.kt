@@ -66,4 +66,3 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp()
     }
 }
-

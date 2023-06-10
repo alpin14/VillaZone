@@ -24,20 +24,26 @@
     <string name="text_awal">Pembayaran Awal Masuk Kost</string>
     <string name="namatv">Asep Gumilang</string>
     <string name="home">Home</string>
-    <string name="daftarpenghuni">Daftar Penghuni</string>
+    <string name="daftarpenghuni">Penghuni</string>
     <string name="tagihan">Tagihan</string>
     <string name="profile">Profile</string>
-    <string name="belum_ada_data">Belum Ada Penghuni!!</string>
+    <string name="belum_ada_data">Belum Ada Penghuni.</string>
     <string name="tambah">Tambah</string>
     <string name="nama_penghuni">Nama Penghuni</string>
     <string name="biaya_kamar">Biaya Kamar</string>
     <string name="string_nomor_kamar">Masukkan Nomor Kamar</string>
     <string name="kontak_penghuni">Masukkan Kontak Penghuni</string>
+    <string name="kontak_penghuni2">Kontak Penghuni</string>
     <string name="simpan">Simpan</string>
     <string name="reset">Reset</string>
     <string name="image">image</string>
     <string name="nomor_kamar">Nomor Kamar</string>
     <string name="tanggal_masuk">Masukkan Tanggal Masuk</string>
+    <string name="tanggal_masuk2">Tanggal Masuk</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
+    <string name="edit" />
+    <string name="lunas">Lunas</string>
+    <string name="belum_ada_tagihan">Belum Ada Tagihan.</string>
+
 </resources>

@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
+    android:label="Home"
     app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.proyektingkat2.villazone.ui.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_tagihanFragment"
             app:destination="@id/tagihanFragment" />
@@ -23,8 +24,8 @@
     <fragment
         android:id="@+id/daftarPenghuniFragment"
         android:name="com.proyektingkat2.villazone.ui.penghuni.daftarpenghuni.DaftarPenghuniFragment"
-        android:label="fragment_daftar_penghuni"
-        tools:layout="@layout/fragment_daftar_penghuni" >
+        android:label="Daftar Penghuni"
+        tools:layout="@layout/fragment_daftar_penghuni">
         <action
             android:id="@+id/action_daftarPenghuniFragment_to_tambahPenghuniFragment"
             app:destination="@id/tambahPenghuniFragment" />
@@ -34,14 +35,14 @@
     </fragment>
     <fragment
         android:id="@+id/tagihanFragment"
-        android:name="com.proyektingkat2.villazone.ui.TagihanFragment"
-        android:label="fragment_tagihan"
+        android:name="com.proyektingkat2.villazone.ui.tagihan.TagihanFragment"
+        android:label="Tagihan"
         tools:layout="@layout/fragment_tagihan" />
     <fragment
         android:id="@+id/tambahPenghuniFragment"
         android:name="com.proyektingkat2.villazone.ui.penghuni.tambahpenghuni.TambahPenghuniFragment"
-        android:label="fragment_tambah_penghuni"
-        tools:layout="@layout/fragment_tambah_penghuni" >
+        android:label="Tambah Penghuni"
+        tools:layout="@layout/fragment_tambah_penghuni">
         <action
             android:id="@+id/action_tambahPenghuniFragment_to_daftarPenghuniFragment"
             app:destination="@id/daftarPenghuniFragment" />
@@ -49,12 +50,12 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.proyektingkat2.villazone.ui.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="Profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/detailPenghuniFragment"
         android:name="com.proyektingkat2.villazone.ui.penghuni.detailpenghuni.DetailPenghuniFragment"
-        android:label="DetailPenghuniFragment" >
+        android:label="Detail Penghuni">
         <argument
             android:name="penghuni"
             app:argType="com.proyektingkat2.villazone.db.PenghuniEntity" />

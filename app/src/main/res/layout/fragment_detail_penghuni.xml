@@ -1,50 +1,178 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16sp">
 
     <TextView
-        android:id="@+id/namaPenghuniText"
-        android:layout_width="match_parent"
+        android:id="@+id/p1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/nama_penghuni"
+        android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/nomorPenghuniText"
+    <EditText
+        android:id="@+id/namaPenghuniText"
+        android:paddingLeft="7dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_radius_edttext"
+        android:ems="10"
+        android:enabled="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/p1" />
 
     <TextView
+        android:id="@+id/p2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/nomor_kamar"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/namaPenghuniText" />
+
+    <EditText
         android:id="@+id/noKamarPenghuniText"
+        android:paddingLeft="7dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_radius_edttext"
+        android:enabled="true"
+        android:textSize="16sp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p2" />
 
     <TextView
+        android:id="@+id/p3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/biaya_kamar"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noKamarPenghuniText" />
+
+    <EditText
         android:id="@+id/biayaKamarText"
+        android:paddingLeft="7dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_radius_edttext"
+        android:enabled="true"
+        android:textSize="16sp"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p3" />
 
     <TextView
-        android:id="@+id/tanggalMasukText"
-        android:layout_width="match_parent"
+        android:id="@+id/p4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/kontak_penghuni2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/biayaKamarText" />
+
+    <EditText
+        android:id="@+id/nomorPenghuniText"
+        android:paddingLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_radius_edttext"
+        android:enabled="true"
+        android:textSize="16sp"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/p4" />
+
+    <TextView
+        android:id="@+id/p5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tanggal_masuk2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nomorPenghuniText" />
+
+    <EditText
+        android:id="@+id/tanggalMasukText"
+        android:paddingLeft="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border_radius_edttext"
+        android:enabled="true"
+        android:textSize="16sp"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/p5" />
 
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/update" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/blue_update"
+        android:text="@string/update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tanggalMasukText"
+        app:layout_constraintTop_toBottomOf="@+id/tanggalMasukText" />
 
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/delete" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/red_delete"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnUpdate"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

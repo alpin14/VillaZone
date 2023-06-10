@@ -9,6 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="blue">#0A157C</color>
-    <color name="grey">#7F8487</color>
+    <color name="gray">#7F8487</color>
     <color name="grey_200">#9BA4B5</color>
+    <color name="red_delete">#BB0707</color>
+    <color name="blue_update">#00B1FD</color>
+    <color name="yellow_save">#FDC800</color>
+    <color name="green_save">#058D1B</color>
 </resources>

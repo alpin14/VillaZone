@@ -13,7 +13,7 @@ import com.proyektingkat2.villazone.db.PenghuniEntity
 import com.proyektingkat2.villazone.ui.penghuni.PenghuniAdapter
 
 class DaftarPenghuniFragment : Fragment(R.layout.fragment_daftar_penghuni),
-        SearchView.OnQueryTextListener, androidx.appcompat.widget.SearchView.OnQueryTextListener {
+    SearchView.OnQueryTextListener, androidx.appcompat.widget.SearchView.OnQueryTextListener {
 
     private var _binding: FragmentDaftarPenghuniBinding? = null
     private val binding get() = _binding!!
@@ -50,7 +50,7 @@ class DaftarPenghuniFragment : Fragment(R.layout.fragment_daftar_penghuni),
 
         binding.recyclerView.apply {
             layoutManager = StaggeredGridLayoutManager(
-                2, StaggeredGridLayoutManager.VERTICAL
+                1, StaggeredGridLayoutManager.VERTICAL
             )
             setHasFixedSize(true)
             adapter = penghuniAdapter
