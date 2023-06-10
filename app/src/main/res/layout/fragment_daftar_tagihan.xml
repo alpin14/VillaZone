@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.tagihan.TagihanFragment">
+    tools:context=".ui.tagihan.daftartagihan.TagihanFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/tagihanRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="invisible"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tv_no_note_available"
+            android:id="@+id/tvNoTagihan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

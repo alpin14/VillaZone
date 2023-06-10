@@ -35,9 +35,13 @@
     </fragment>
     <fragment
         android:id="@+id/tagihanFragment"
-        android:name="com.proyektingkat2.villazone.ui.tagihan.TagihanFragment"
+        android:name="com.proyektingkat2.villazone.ui.tagihan.daftartagihan.TagihanFragment"
         android:label="Tagihan"
-        tools:layout="@layout/fragment_tagihan" />
+        tools:layout="@layout/fragment_daftar_tagihan" >
+        <argument
+            android:name="tagihan"
+            app:argType="com.proyektingkat2.villazone.db.PenghuniEntity" />
+    </fragment>
     <fragment
         android:id="@+id/tambahPenghuniFragment"
         android:name="com.proyektingkat2.villazone.ui.penghuni.tambahpenghuni.TambahPenghuniFragment"

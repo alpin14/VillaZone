@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     app:cardCornerRadius="5dp"
-    app:cardElevation="3dp">
+    app:cardElevation="3dp"
+    android:background="@drawable/border_radius_rv">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,6 +24,7 @@
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
             android:layout_toLeftOf="@id/tvStatusPembayaran"
+            android:fontFamily="@font/k2d"
             android:padding="4dp"
             android:text="@string/nama_penghuni"
             android:textColor="@color/black"
@@ -40,6 +42,7 @@
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
             android:layout_toLeftOf="@id/tvStatusPembayaran"
+            android:fontFamily="@font/k2d"
             android:padding="4dp"
             android:text="@string/biaya_kamar"
             android:textColor="@color/black"
@@ -57,10 +60,12 @@
             android:layout_marginTop="3dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="3dp"
+            android:fontFamily="@font/k2d"
             android:padding="3dp"
-            android:text="@string/lunas"
-            android:textColor="@color/green_save"
+            android:text="@string/belum_lunas"
+            android:textColor="@color/red_delete"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:tint="@color/white" />
 
     </RelativeLayout>

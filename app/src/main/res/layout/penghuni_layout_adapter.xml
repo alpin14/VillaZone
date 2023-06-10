@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
-        android:background="@color/white"
+        android:background="@drawable/border_radius_rv"
         app:cardCornerRadius="5dp"
         app:cardElevation="8dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,8 @@
                 android:text="@string/nama_penghuni"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/k2d"/>
 
             <TextView
                 android:id="@+id/tvNomorKamar"
@@ -37,7 +38,8 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/nomor_kamar"
                 android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:fontFamily="@font/k2d"/>
 
         </LinearLayout>
 

@@ -7,7 +7,8 @@ import androidx.room.*
 interface PenghuniDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertPenghuni(penghuniEntity: PenghuniEntity)
+    suspend fun insertPenghuni(penghuni: PenghuniEntity): Long
+
 
     @Update
     suspend fun updatePenghuni(penghuniEntity: PenghuniEntity)

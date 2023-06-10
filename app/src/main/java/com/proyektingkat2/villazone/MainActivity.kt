@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpViewModel() {
         val noteRepository = PenghuniRepository(
-            AppDatabase(this)
+            AppDatabase.getInstance(this)
         )
 
         val viewModelProviderFactory =
@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
             viewModelProviderFactory
         ).get(DaftarPenghuniViewModel::class.java)
     }
+
 
     private fun setUpNavigation() {
         val navView: BottomNavigationView = binding.navView

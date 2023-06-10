@@ -5,28 +5,32 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [PenghuniEntity::class], version = 1, exportSchema = false)
+@Database(entities = [PenghuniEntity::class, TagihanEntity::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun getPenghuniDao(): PenghuniDao
+    abstract fun getTagihanDao(): TagihanDao
 
     companion object {
         @Volatile
         private var instance: AppDatabase? = null
         private val LOCK = Any()
 
-        operator fun invoke(context: Context) = instance
-            ?: synchronized(LOCK) {
-                instance
-                    ?: createDatabase(context).also { instance = it }
+        fun getInstance(context: Context): AppDatabase {
+            return instance ?: synchronized(LOCK) {
+                instance ?: buildDatabase(context).also { instance = it }
             }
+        }
 
-        private fun createDatabase(context: Context) =
-            Room.databaseBuilder(
+        private fun buildDatabase(context: Context): AppDatabase {
+            return Room.databaseBuilder(
                 context.applicationContext,
                 AppDatabase::class.java,
-                "penghuni_db"
+                "villazone_db"
             )
-                .fallbackToDestructiveMigration() // Menambahkan ini untuk menghapus basis data yang ada
+                .fallbackToDestructiveMigration()
                 .build()
+        }
     }
 }
+
+

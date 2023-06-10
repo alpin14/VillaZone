@@ -45,5 +45,8 @@
     <string name="edit" />
     <string name="lunas">Lunas</string>
     <string name="belum_ada_tagihan">Belum Ada Tagihan.</string>
+    <string name="belum_lunas">Belum Lunas</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
