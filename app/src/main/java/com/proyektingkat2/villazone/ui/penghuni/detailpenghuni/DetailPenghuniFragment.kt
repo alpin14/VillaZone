@@ -15,7 +15,6 @@ import com.proyektingkat2.villazone.MainActivity
 import com.proyektingkat2.villazone.databinding.FragmentDetailPenghuniBinding
 import com.proyektingkat2.villazone.db.PenghuniEntity
 import com.proyektingkat2.villazone.ui.penghuni.daftarpenghuni.DaftarPenghuniViewModel
-import java.text.DecimalFormat
 import java.text.NumberFormat
 
 class DetailPenghuniFragment : Fragment() {
@@ -28,7 +27,6 @@ class DetailPenghuniFragment : Fragment() {
     private lateinit var daftarPenghuniViewModel: DaftarPenghuniViewModel
 
     private var isEditModeEnabled = false
-    private var errorMessage: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -76,7 +74,7 @@ class DetailPenghuniFragment : Fragment() {
     private fun updatePenghuni() {
         val nama = binding.namaPenghuniText.text.toString().trim()
         val noKamar = binding.noKamarPenghuniText.text.toString().trim().toIntOrNull()
-        val biayaKamarString = binding.biayaKamarText.text.toString().replace(".", "")
+        val biayaKamarString = binding.biayaKamarText.text.toString().replace(",", "")
         val biayaKamar = biayaKamarString.toDoubleOrNull()
         val nomorHpString = binding.nomorPenghuniText.text.toString().trim()
         val nomorHp = nomorHpString.toDoubleOrNull()
@@ -117,8 +115,7 @@ class DetailPenghuniFragment : Fragment() {
     }
 
     private fun showErrorMessage(message: String) {
-        showToast(message)
-        errorMessage = message
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {
@@ -134,8 +131,6 @@ class DetailPenghuniFragment : Fragment() {
         binding.noKamarPenghuniText.isEnabled = true
         binding.biayaKamarText.isEnabled = true
         binding.tanggalMasukText.isEnabled = true
-
-        errorMessage = null
     }
 
 
@@ -159,11 +154,6 @@ class DetailPenghuniFragment : Fragment() {
                         binding.biayaKamarText.addTextChangedListener(this)
                     }
                 }
-
-                if (errorMessage != null) {
-                    showToast(errorMessage!!)
-                    errorMessage = null
-                }
             }
         })
     }
@@ -172,12 +162,15 @@ class DetailPenghuniFragment : Fragment() {
         return try {
             val cleanInput = input.replace(".", "").replace(",", "")
             val value = cleanInput.toLong()
-            val formatter = DecimalFormat("#,###")
+
+            val formatter = NumberFormat.getNumberInstance()
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 0
+            formatter.isGroupingUsed = true
+
             formatter.format(value)
         } catch (e: NumberFormatException) {
-            showErrorMessage("Input tidak valid")
             ""
         }
     }
 }
-

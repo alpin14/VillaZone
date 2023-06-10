@@ -55,7 +55,8 @@
     <fragment
         android:id="@+id/detailPenghuniFragment"
         android:name="com.proyektingkat2.villazone.ui.penghuni.detailpenghuni.DetailPenghuniFragment"
-        android:label="Detail Penghuni">
+        android:label="Detail Penghuni"
+        tools:layout="@layout/fragment_detail_penghuni">
         <argument
             android:name="penghuni"
             app:argType="com.proyektingkat2.villazone.db.PenghuniEntity" />
