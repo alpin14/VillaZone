@@ -4,11 +4,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="textVillaZone">VillaZone Kost</string>
     <string name="textBandung">Bandung, Indonesia</string>
-    <string name="textBabakan">Babakan Ciamis, Bandung</string>
+    <string name="textBabakan">Jl.Raya Bojongsoang, Gg Babakan Ciamis, STT TELKOM, Sukapura, Dayeuhkolot, Bandung, West Java 40275, Kota Bandung, Jawa Barat.</string>
     <string name="textKost">Kost</string>
     <string name="textLuasTanah">105 m2 Luas Tanah</string>
     <string name="IconLuasTanah">IconLuasTanah</string>
-    <string name="textKamar">30 Kamar Tidur</string>
+    <string name="textKamar">49 Kamar Tidur</string>
 
     <string name="fragmentTagihan">Hello, jangan lupa bayar kost</string>
     <string name="IconParkiran">IconParkiran</string>

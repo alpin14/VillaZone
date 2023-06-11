@@ -66,7 +66,7 @@ class HomeFragment : Fragment() {
         )
         list.add(
             ImageData(
-                "https://www.sigiarchitect.com/wp-content/uploads/2015/10/desain-rumah-kost-ekslusif-2-lantai.jpg"
+                "https://cdn-2.tstatic.net/kaltim/foto/bank/images/ilustrasi-kost-kostan_20180315_102338.jpg"
             )
         )
         list.add(
