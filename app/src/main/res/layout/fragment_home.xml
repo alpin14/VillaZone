@@ -10,38 +10,239 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/k1cTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Kamar 1C : Rp 600.000/Bulan, Rp 6.5 Jt/Tahun"
+            app:layout_constraintStart_toStartOf="@+id/k1bTextView"
+            app:layout_constraintTop_toBottomOf="@+id/k1bTextView" />
+
+        <TextView
+            android:id="@+id/k1bTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Kamar 1B : Rp 650.000/Bulan, Rp 7 Jt/Tahun"
+            app:layout_constraintStart_toStartOf="@+id/k1aTextView"
+            app:layout_constraintTop_toBottomOf="@+id/k1aTextView" />
+
+        <TextView
+            android:id="@+id/k1aTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Kamar 1A : Rp 700.000/Bulan, Rp 8 Jt/Tahun"
+            app:layout_constraintStart_toStartOf="@+id/ParkiranImageView"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
         <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
         </androidx.viewpager2.widget.ViewPager2>
 
-    <LinearLayout
-        android:id="@+id/dots_indicator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_pager" />
+        <LinearLayout
+            android:id="@+id/dots_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_pager" />
 
-    <TextView
-        android:id="@+id/VillaZoneTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/textVillaZone"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
+        <TextView
+            android:id="@+id/VillaZoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/textVillaZone"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
 
+        <ImageView
+            android:id="@+id/BangunanImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/outline_apartment_22"
+            android:contentDescription="@string/IconBangunan"
+            app:layout_constraintBottom_toBottomOf="@+id/LuasTanahTextView"
+            app:layout_constraintStart_toEndOf="@+id/LuasTanahTextView"
+            app:layout_constraintTop_toTopOf="@+id/LuasTanahTextView" />
 
+        <TextView
+            android:id="@+id/BangunanTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/k2d_thin"
+            android:text="@string/textBangunan"
+            app:layout_constraintBottom_toBottomOf="@+id/BangunanImageView"
+            app:layout_constraintStart_toEndOf="@+id/BangunanImageView"
+            app:layout_constraintTop_toTopOf="@+id/BangunanImageView" />
+
+        <TextView
+            android:id="@+id/BandungTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/textBandung"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VillaZoneTextView" />
+
+        <TextView
+            android:id="@+id/BabakanTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:gravity="left"
+            android:text="@string/textBabakan"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/BandungTextView"
+            app:layout_constraintTop_toBottomOf="@+id/BandungTextView" />
+
+        <TextView
+            android:id="@+id/KostTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/abhaya_libre"
+            android:text="@string/textKost"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BabakanTextView" />
+
+        <TextView
+            android:id="@+id/LuasTanahTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/k2d_thin"
+            android:text="@string/textLuasTanah"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@+id/LuasTanahImageView"
+            app:layout_constraintStart_toEndOf="@+id/LuasTanahImageView"
+            app:layout_constraintTop_toTopOf="@+id/LuasTanahImageView" />
+
+        <ImageView
+            android:id="@+id/KamarImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/Iconkamar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LuasTanahImageView"
+            app:srcCompat="@drawable/baseline_single_bed_22" />
+
+        <ImageView
+            android:id="@+id/KamarMandiImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/IconKamarMandi"
+            app:layout_constraintStart_toStartOf="@+id/BangunanImageView"
+            app:layout_constraintTop_toBottomOf="@+id/BangunanImageView"
+            app:srcCompat="@drawable/outline_bathroom_22" />
+
+        <TextView
+            android:id="@+id/KamarMandiTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/k2d_thin"
+            android:text="@string/textKamarMandi"
+            app:layout_constraintBottom_toBottomOf="@+id/KamarMandiImageView"
+            app:layout_constraintStart_toEndOf="@+id/KamarMandiImageView"
+            app:layout_constraintTop_toTopOf="@+id/KamarMandiImageView" />
+
+        <ImageView
+            android:id="@+id/LuasTanahImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/KostTextView"
+            app:srcCompat="@drawable/baseline_zoom_out_map_22"
+            android:contentDescription="@string/IconLuasTanah"/>
+
+        <TextView
+            android:id="@+id/KamarTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/textKamar"
+            android:fontFamily="@font/k2d_thin"
+            app:layout_constraintBottom_toBottomOf="@+id/KamarImageView"
+            app:layout_constraintStart_toEndOf="@+id/KamarImageView"
+            app:layout_constraintTop_toTopOf="@+id/KamarImageView" />
+
+        <ImageView
+            android:id="@+id/ParkiranImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/IconParkiran"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/KamarImageView"
+            app:srcCompat="@drawable/outline_directions_bike_22" />
+
+        <TextView
+            android:id="@+id/ParkiranTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/k2d_thin"
+            android:text="@string/textParkiran"
+            app:layout_constraintBottom_toBottomOf="@+id/ParkiranImageView"
+            app:layout_constraintStart_toEndOf="@+id/ParkiranImageView"
+            app:layout_constraintTop_toTopOf="@+id/ParkiranImageView" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="24dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ParkiranTextView" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Fasilitas :"
+            app:layout_constraintStart_toStartOf="@+id/k1cTextView"
+            app:layout_constraintTop_toBottomOf="@+id/k1cTextView" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Swimming Pool + Shower (Bilas ), Kantin, Musholla, Billyard, Internet, Ruang Tamu, Parkir Motor , AIR Filterisasi."
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

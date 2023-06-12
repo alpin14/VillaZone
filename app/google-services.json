@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "32086017181",
+    "project_id": "villazone-1ca87",
+    "storage_bucket": "villazone-1ca87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32086017181:android:059751b6355789cc298074",
+        "android_client_info": {
+          "package_name": "com.proyektingkat2.villazone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32086017181-pgmv7pa172vvbjbt4lenh4obaks2gs3q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-2wPNfInSR96zteSUZhiIehCaHW1a7Fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32086017181-pgmv7pa172vvbjbt4lenh4obaks2gs3q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

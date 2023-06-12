@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">VillaZone</string>
-
     <string name="textVillaZone">VillaZone Kost</string>
     <string name="textBandung">Bandung, Indonesia</string>
     <string name="textBabakan">Babakan Ciamis, Bandung</string>
     <string name="textKost">Kost</string>
     <string name="textLuasTanah">105 m2 Luas Tanah</string>
     <string name="IconLuasTanah">IconLuasTanah</string>
+    <string name="textKamarMandi">Kamar Mandi</string>
     <string name="textKamar">30 Kamar Tidur</string>
+
 
     <string name="fragmentTagihan">Hello, jangan lupa bayar kost</string>
     <string name="IconParkiran">IconParkiran</string>
@@ -16,7 +17,6 @@
     <string name="textBangunan">95 m2 Luas Bangunan</string>
     <string name="IconBangunan">IconBangunan</string>
     <string name="IconKamarMandi">IconKamarMandi</string>
-    <string name="textKamarMandi">Kamar Mandi</string>
 
     <string name="textProfile">Profile</string>
     <string name="textGroup">Group</string>
@@ -46,7 +46,12 @@
     <string name="lunas">Lunas</string>
     <string name="belum_ada_tagihan">Belum Ada Tagihan.</string>
     <string name="belum_lunas">Belum Lunas</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sudah_punya_akun">Sudah punya akun?</string>
+    <string name="masuk_disini">Masuk disini</string>
 
 </resources>
