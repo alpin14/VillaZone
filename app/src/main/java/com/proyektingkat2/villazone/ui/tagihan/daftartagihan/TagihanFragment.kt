@@ -32,7 +32,7 @@ class TagihanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tagihanAdapter = TagihanAdapter()
+        tagihanAdapter = TagihanAdapter(this)
 
         binding.tagihanRecyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
@@ -46,7 +46,7 @@ class TagihanFragment : Fragment() {
         viewModel.getAllTagihan().observe(viewLifecycleOwner, Observer { tagihanList ->
             Log.d("TagihanFragment", "Tagihan list size: ${tagihanList.size}")
             tagihanAdapter.setData(tagihanList)
-            updateUI(tagihanList) // Memanggil fungsi updateUI dengan data tagihanList
+            updateUI(tagihanList)
         })
     }
 
@@ -60,5 +60,3 @@ class TagihanFragment : Fragment() {
         }
     }
 }
-
-

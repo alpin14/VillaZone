@@ -5,6 +5,7 @@ import com.proyektingkat2.villazone.db.PenghuniDao
 import com.proyektingkat2.villazone.db.PenghuniEntity
 import com.proyektingkat2.villazone.db.TagihanDao
 import com.proyektingkat2.villazone.db.TagihanEntity
+import com.proyektingkat2.villazone.model.StatusPembayaran
 
 class PenghuniRepository(db: AppDatabase) {
 
@@ -13,7 +14,7 @@ class PenghuniRepository(db: AppDatabase) {
 
     suspend fun insertPenghuniWithTagihan(penghuniEntity: PenghuniEntity) {
         val penghuniId = penghuniDao.insertPenghuni(penghuniEntity)
-        val tagihan = TagihanEntity(penghuniId.toInt(), penghuniEntity.namaPenghuni, penghuniEntity.biayaKamar, penghuniEntity.statusPembayaran)
+        val tagihan = TagihanEntity(penghuniId.toInt(), penghuniEntity.namaPenghuni, penghuniEntity.biayaKamar, StatusPembayaran.BELUM_LUNAS)
         tagihanDao.insertTagihan(tagihan)
     }
 
@@ -27,6 +28,11 @@ class PenghuniRepository(db: AppDatabase) {
         val tagihan = TagihanEntity(penghuniEntity.id, penghuniEntity.namaPenghuni, penghuniEntity.biayaKamar, penghuniEntity.statusPembayaran)
         tagihanDao.updateTagihan(tagihan)
     }
+
+    suspend fun updateTagihanStatus(tagihanId: Int, status: StatusPembayaran) {
+        penghuniDao.updateTagihanStatus(tagihanId, status)
+    }
+
 
     fun getAllPenghuni() = penghuniDao.getAllPenghuni()
     fun searchPenghuni(query: String?) = penghuniDao.searchPenghuni(query)

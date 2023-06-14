@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,8 +15,10 @@ import androidx.navigation.fragment.navArgs
 import com.proyektingkat2.villazone.MainActivity
 import com.proyektingkat2.villazone.databinding.FragmentDetailPenghuniBinding
 import com.proyektingkat2.villazone.db.PenghuniEntity
+import com.proyektingkat2.villazone.helper.toast
+import com.proyektingkat2.villazone.model.StatusPembayaran
 import com.proyektingkat2.villazone.ui.penghuni.daftarpenghuni.DaftarPenghuniViewModel
-import java.text.NumberFormat
+import java.text.DecimalFormat
 
 class DetailPenghuniFragment : Fragment() {
 
@@ -41,6 +44,8 @@ class DetailPenghuniFragment : Fragment() {
         daftarPenghuniViewModel = (activity as MainActivity).daftarPenghuniViewModel
         currentPenghuni = args.penghuni!!
 
+        setupBiayaKamarInputFormatting()
+
         displayPenghuniDetails()
 
         binding.namaPenghuniText.setOnClickListener { enableEditMode() }
@@ -49,7 +54,7 @@ class DetailPenghuniFragment : Fragment() {
         binding.biayaKamarText.setOnClickListener { enableEditMode() }
         binding.tanggalMasukText.setOnClickListener { enableEditMode() }
 
-        setupBiayaKamarInputFormatting()
+
 
 
         binding.btnUpdate.setOnClickListener {
@@ -63,19 +68,19 @@ class DetailPenghuniFragment : Fragment() {
     }
 
     private fun displayPenghuniDetails() {
-        val biayaKamarFormatted = NumberFormat.getInstance().format(currentPenghuni.biayaKamar)
-        binding.biayaKamarText.setText(biayaKamarFormatted)
+        binding.biayaKamarText.setText(currentPenghuni.biayaKamar)
         binding.namaPenghuniText.setText(currentPenghuni.namaPenghuni)
         binding.nomorPenghuniText.setText(currentPenghuni.nomorHp)
         binding.noKamarPenghuniText.setText(currentPenghuni.nomorKamar.toString())
         binding.tanggalMasukText.setText(currentPenghuni.tanggalMasuk)
+        Log.d("currentPenghuni", "Biaya kamar "+ currentPenghuni.biayaKamar)
     }
 
     private fun updatePenghuni() {
         val nama = binding.namaPenghuniText.text.toString().trim()
         val noKamar = binding.noKamarPenghuniText.text.toString().trim().toIntOrNull()
-        val biayaKamarString = binding.biayaKamarText.text.toString().replace(",", "")
-        val biayaKamar = biayaKamarString.toDoubleOrNull()
+        val biayaKamarString = binding.biayaKamarText.text.toString().replace(".", "").replace(",", "")
+        val biayaKamar = biayaKamarString.toIntOrNull()
         val nomorHpString = binding.nomorPenghuniText.text.toString().trim()
         val nomorHp = nomorHpString.toDoubleOrNull()
         val masuk = binding.tanggalMasukText.text.toString().trim()
@@ -86,8 +91,9 @@ class DetailPenghuniFragment : Fragment() {
                 nama,
                 nomorHpString,
                 noKamar,
-                biayaKamar,
-                masuk
+                biayaKamar.toString(),
+                masuk,
+                StatusPembayaran.BELUM_LUNAS
             )
             daftarPenghuniViewModel.updatePenghuni(updatedPenghuni)
             showToast("Data penghuni berhasil diperbarui")
@@ -160,16 +166,12 @@ class DetailPenghuniFragment : Fragment() {
 
     private fun formatCurrency(input: String): String {
         return try {
-            val cleanInput = input.replace(".", "").replace(",", "")
+            val cleanInput = input.replace(Regex("[^\\d]"), "") // Menghapus semua karakter non-digit
             val value = cleanInput.toLong()
-
-            val formatter = NumberFormat.getNumberInstance()
-            formatter.minimumFractionDigits = 0
-            formatter.maximumFractionDigits = 0
-            formatter.isGroupingUsed = true
-
+            val formatter = DecimalFormat("#,###")
             formatter.format(value)
         } catch (e: NumberFormatException) {
+            activity?.toast("Input tidak valid")
             ""
         }
     }

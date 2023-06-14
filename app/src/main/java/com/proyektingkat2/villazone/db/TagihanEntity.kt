@@ -18,7 +18,7 @@ data class TagihanEntity(
     @PrimaryKey(autoGenerate = true)
     val penghuniId: Int = 0,
     val namaPenghuni: String,
-    val biayaKamar: Double,
+    val biayaKamar: String,
     val statusPembayaran: StatusPembayaran
 )
 

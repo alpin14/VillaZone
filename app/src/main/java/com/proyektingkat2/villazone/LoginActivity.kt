@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.proyektingkat2.villazone.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -22,6 +24,12 @@ class LoginActivity : AppCompatActivity() {
         binding.registerMv.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+        }
+
+        val auth = Firebase.auth
+        if (auth.currentUser!= null){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
         binding.buttonLgn.setOnClickListener {
