@@ -74,7 +74,7 @@
     <fragment
         android:id="@+id/detailTagihanFragment"
         android:name="com.proyektingkat2.villazone.ui.tagihan.detailtagihan.DetailTagihanFragment"
-        android:label="DetailTagihanFragment" >
+        android:label="Detail Tagihan">
         <action
             android:id="@+id/action_detailTagihanFragment_to_tagihanFragment"
             app:destination="@id/tagihanFragment" />

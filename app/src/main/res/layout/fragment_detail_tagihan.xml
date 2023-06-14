@@ -90,13 +90,11 @@
         android:id="@+id/btnLunas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
         android:backgroundTint="@color/green_save"
         android:text="@string/lunas"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/biayaKamarText"
         app:layout_constraintStart_toStartOf="@+id/biayaKamarText"
         app:layout_constraintTop_toBottomOf="@+id/biayaKamarText" />
 

@@ -51,7 +51,7 @@ class TagihanAdapter(private val fragment: Fragment) : RecyclerView.Adapter<Tagi
 
         fun bind(tagihan: PenghuniEntity) {
             binding.tvNamaPenghuniT.text = tagihan.namaPenghuni
-            binding.tvBiayaKamarT.text = tagihan.biayaKamar.toString()
+            binding.tvBiayaKamarT.text = tagihan.biayaKamar
 
             val paymentStatus = when (tagihan.statusPembayaran) {
                 StatusPembayaran.LUNAS -> {

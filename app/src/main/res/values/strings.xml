@@ -4,17 +4,17 @@
     <string name="textBandung">Bandung, Indonesia</string>
     <string name="textBabakan">Babakan Ciamis, Bandung</string>
     <string name="textKost">Kost</string>
-    <string name="textLuasTanah">105 m2 Luas Tanah</string>
+    <string name="textLuasTanah">180 m2 Luas Tanah</string>
     <string name="IconLuasTanah">IconLuasTanah</string>
     <string name="textKamarMandi">Kamar Mandi</string>
-    <string name="textKamar">30 Kamar Tidur</string>
+    <string name="textKamar">60 Kamar Tidur</string>
 
 
     <string name="fragmentTagihan">Hello, jangan lupa bayar kost</string>
     <string name="IconParkiran">IconParkiran</string>
     <string name="textParkiran">Parkiran Motor</string>
     <string name="Iconkamar">IconKamar</string>
-    <string name="textBangunan">95 m2 Luas Bangunan</string>
+    <string name="textBangunan">225 m2 Luas Bangunan</string>
     <string name="IconBangunan">IconBangunan</string>
     <string name="IconKamarMandi">IconKamarMandi</string>
 

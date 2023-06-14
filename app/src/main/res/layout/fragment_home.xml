@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/k2d"
             android:text="Kamar 1C : Rp 600.000/Bulan, Rp 6.5 Jt/Tahun"
             app:layout_constraintStart_toStartOf="@+id/k1bTextView"
             app:layout_constraintTop_toBottomOf="@+id/k1bTextView" />
@@ -24,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/k2d"
             android:text="Kamar 1B : Rp 650.000/Bulan, Rp 7 Jt/Tahun"
             app:layout_constraintStart_toStartOf="@+id/k1aTextView"
             app:layout_constraintTop_toBottomOf="@+id/k1aTextView" />
@@ -32,7 +34,8 @@
             android:id="@+id/k1aTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/k2d"
             android:text="Kamar 1A : Rp 700.000/Bulan, Rp 8 Jt/Tahun"
             app:layout_constraintStart_toStartOf="@+id/ParkiranImageView"
             app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -61,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:fontFamily="@font/k2d"
             android:text="@string/textVillaZone"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -219,7 +223,7 @@
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="18dp"
             android:background="?android:attr/listDivider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -231,6 +235,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/k2d"
+            android:textStyle="bold"
             android:text="Fasilitas :"
             app:layout_constraintStart_toStartOf="@+id/k1cTextView"
             app:layout_constraintTop_toBottomOf="@+id/k1cTextView" />
@@ -239,8 +245,9 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/k2d"
             android:layout_marginTop="8dp"
-            android:text="Swimming Pool + Shower (Bilas ), Kantin, Musholla, Billyard, Internet, Ruang Tamu, Parkir Motor , AIR Filterisasi."
+            android:text="Swimming Pool + Shower (Bilas ), Kantin, Musholla, Billyard, Internet, Ruang Tamu, Parkir Motor , Air Filterisasi."
             app:layout_constraintStart_toStartOf="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
