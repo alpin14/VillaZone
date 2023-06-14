@@ -41,6 +41,12 @@
         <argument
             android:name="tagihan"
             app:argType="com.proyektingkat2.villazone.db.PenghuniEntity" />
+        <action
+            android:id="@+id/action_tagihanFragment_to_detailTagihanFragment"
+            app:destination="@id/detailTagihanFragment" />
+        <argument
+            android:name="status"
+            app:argType="com.proyektingkat2.villazone.model.StatusPembayaran" />
     </fragment>
     <fragment
         android:id="@+id/tambahPenghuniFragment"
@@ -63,6 +69,17 @@
         tools:layout="@layout/fragment_detail_penghuni">
         <argument
             android:name="penghuni"
+            app:argType="com.proyektingkat2.villazone.db.PenghuniEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailTagihanFragment"
+        android:name="com.proyektingkat2.villazone.ui.tagihan.detailtagihan.DetailTagihanFragment"
+        android:label="DetailTagihanFragment" >
+        <action
+            android:id="@+id/action_detailTagihanFragment_to_tagihanFragment"
+            app:destination="@id/tagihanFragment" />
+        <argument
+            android:name="tagihan"
             app:argType="com.proyektingkat2.villazone.db.PenghuniEntity" />
     </fragment>
 </navigation>

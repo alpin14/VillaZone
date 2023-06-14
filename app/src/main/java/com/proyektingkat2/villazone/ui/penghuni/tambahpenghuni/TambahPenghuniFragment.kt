@@ -12,6 +12,7 @@ import com.proyektingkat2.villazone.R
 import com.proyektingkat2.villazone.databinding.FragmentTambahPenghuniBinding
 import com.proyektingkat2.villazone.db.PenghuniEntity
 import com.proyektingkat2.villazone.helper.toast
+import com.proyektingkat2.villazone.model.StatusPembayaran
 import com.proyektingkat2.villazone.ui.penghuni.daftarpenghuni.DaftarPenghuniViewModel
 import java.text.DecimalFormat
 
@@ -60,7 +61,7 @@ class TambahPenghuniFragment : Fragment(R.layout.fragment_tambah_penghuni) {
         val nomorPenghuni = binding.nomorPenghuniInp.text.toString().trim()
         val noKamarPenghuni = binding.nomorKamarInp.text.toString().trim()
         val biayaKamarString = binding.biayaKamarInp.text.toString().replace(".", "").replace(",", "")
-        val biayaKamar = biayaKamarString.toDoubleOrNull()
+        val biayaKamar = biayaKamarString.toIntOrNull()
         val tanggalMasuk = binding.tanggalMasukInp.text.toString().trim()
 
         if (namaPenghuni.isEmpty() || nomorPenghuni.isEmpty() || noKamarPenghuni.isEmpty() || biayaKamarString.isEmpty() || tanggalMasuk.isEmpty()) {
@@ -84,8 +85,9 @@ class TambahPenghuniFragment : Fragment(R.layout.fragment_tambah_penghuni) {
             namaPenghuni,
             nomorPenghuni,
             noKamarPenghuni.toInt(),
-            biayaKamar,
-            tanggalMasuk
+            biayaKamar.toString(),
+            tanggalMasuk,
+            statusPembayaran = StatusPembayaran.BELUM_LUNAS
         )
 
         daftarPenghuniViewModel.addPenghuni(penghuniEntity)

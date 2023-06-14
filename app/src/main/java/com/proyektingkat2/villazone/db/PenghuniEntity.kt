@@ -14,7 +14,7 @@ data class PenghuniEntity(
     val namaPenghuni: String,
     val nomorHp: String,
     val nomorKamar: Int,
-    val biayaKamar: Double,
+    val biayaKamar: String,
     val tanggalMasuk: String,
-    val statusPembayaran: StatusPembayaran = StatusPembayaran.BELUM_LUNAS
+    val statusPembayaran: StatusPembayaran
 ) : Parcelable

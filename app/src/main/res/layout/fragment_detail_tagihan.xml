@@ -1,9 +1,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16sp">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/t1"
@@ -18,18 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/namaPenghuniText"
-        android:paddingLeft="7dp"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/border_radius_edttext"
-        android:ems="10"
-        android:enabled="true"
         android:textSize="18sp"
+        android:textColor="@color/black"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/t1" />
@@ -47,18 +44,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/namaPenghuniText" />
 
-    <EditText
+    <TextView
         android:id="@+id/noKamarPenghuniText"
-        android:paddingLeft="7dp"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/border_radius_edttext"
-        android:enabled="true"
         android:textSize="16sp"
-        android:inputType="number"
+        android:textColor="@color/black"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/t2" />
@@ -76,30 +71,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/noKamarPenghuniText" />
 
-    <EditText
+    <TextView
         android:id="@+id/biayaKamarText"
-        android:paddingLeft="7dp"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/border_radius_edttext"
-        android:enabled="true"
         android:textSize="16sp"
-        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:enabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/t3" />
 
     <Button
         android:id="@+id/btnLunas"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="@color/green_save"
         android:text="@string/lunas"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/biayaKamarText"
         app:layout_constraintTop_toBottomOf="@+id/biayaKamarText" />

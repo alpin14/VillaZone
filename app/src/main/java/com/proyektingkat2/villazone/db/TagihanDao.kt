@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.proyektingkat2.villazone.model.StatusPembayaran
 
 @Dao
 interface TagihanDao {
@@ -19,6 +20,9 @@ interface TagihanDao {
     @Query("SELECT * FROM tagihan WHERE penghuniId = :penghuniId")
     suspend fun getTagihanByPenghuniId(penghuniId: Int): TagihanEntity?
 
-    @Query("SELECT * FROM tagihan")
-    suspend fun getAllTagihan(): List<TagihanEntity>
+
+    @Query("UPDATE tagihan SET statusPembayaran = :status WHERE penghuniId = :penghuniId")
+    suspend fun updateTagihanStatus(penghuniId: Int, status: StatusPembayaran): Int
 }
+
+
