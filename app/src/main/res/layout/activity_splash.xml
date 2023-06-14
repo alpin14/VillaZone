@@ -41,6 +41,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="125dp"
         android:text="Design by VillaZone Team"
+        android:fontFamily="@font/k2d"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

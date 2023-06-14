@@ -54,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:fontFamily="@font/k2d"
             android:padding="50dp"
             android:text="@string/belum_ada_data"
             android:textColor="@color/black"

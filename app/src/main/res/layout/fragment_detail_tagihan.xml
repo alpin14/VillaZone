@@ -12,6 +12,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="@string/nama_penghuni"
+        android:fontFamily="@font/k2d"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -23,6 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
+        android:fontFamily="@font/k2d"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textSize="18sp"
@@ -39,6 +41,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/nomor_kamar"
+        android:fontFamily="@font/k2d"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -47,6 +50,7 @@
 
     <TextView
         android:id="@+id/noKamarPenghuniText"
+        android:fontFamily="@font/k2d"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -61,6 +65,7 @@
 
     <TextView
         android:id="@+id/t3"
+        android:fontFamily="@font/k2d"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -74,6 +79,7 @@
 
     <TextView
         android:id="@+id/biayaKamarText"
+        android:fontFamily="@font/k2d"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
@@ -90,6 +96,7 @@
         android:id="@+id/btnLunas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/k2d"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/green_save"
         android:text="@string/lunas"
