@@ -38,7 +38,7 @@
             android:gravity="center"
             android:padding="50dp"
             android:text="@string/belum_ada_tagihan"
-            android:fontFamily="@font/k2d"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"

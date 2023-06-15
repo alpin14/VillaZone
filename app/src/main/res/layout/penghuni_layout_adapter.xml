@@ -26,21 +26,21 @@
                 android:id="@+id/tvNamaPenghuni"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
                 android:text="@string/nama_penghuni"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/k2d"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvNomorKamar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
                 android:text="@string/nomor_kamar"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                android:fontFamily="@font/k2d"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
 
